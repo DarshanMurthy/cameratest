@@ -1,0 +1,6 @@
+# node/expo
+node_modules/
+.expo/
+
+# vim
+*.sw?
