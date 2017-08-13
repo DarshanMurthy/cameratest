@@ -1,6 +1,7 @@
-# node/expo
+# node/expo/yarn
 node_modules/
 .expo/
+yarn.lock
 
 # vim
 *.sw?
