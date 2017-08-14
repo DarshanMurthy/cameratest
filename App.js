@@ -1,49 +1,57 @@
+'use strict';
 import React from 'react';
-import { ActivityIndicator, StyleSheet, Text, View, ListView } from 'react-native';
+//import { ActivityIndicator, ListView } from 'react-native';
+import {
+  AppRegistry,
+  Dimensions,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View
+} from 'react-native';
+import Camera from 'react-native-camera';
 
 export default class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={
-      isLoading:true
-    }
-  }
-  componentDidMount(){
-    return fetch('https://facebook.github.io/react-native/movies.json')
-          .then ((response)=> response.json())
-          .then((responseJson) => {
-            let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2 });
-            this.setState({
-              isLoading:false,
-              dataSource : ds.cloneWithRows(responseJson.movies)          
-            });
-          })
-          .catch((error) => {
-            console.error(error)
-          });
-  };
-
   render() {
-    if(this.state.isLoading){
     return (
-      <View style={{flex:1, paddingTop: 20}}>
-       <ActivityIndicator/>
+      <View style={styles.container}>
+        <Camera
+          ref={(cam) => {
+            this.camera = cam;
+          }}
+          style={styles.preview}
+          aspect={Camera.constants.Aspect.fill}>
+          <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
+        </Camera>
       </View>
     );
   }
-   return(
-     <View style={{flex:1, paddingTop:20}}>
-       <ListView
-       dataSource={this.state.dataSource}
-        renderRow={(rowData) => <Text>{rowData.title}, {rowData.releaseYear}</Text>}
-       />
-     </View>
-   );
 
-
-
-
- 
+  takePicture() {
+    const options = {};
+    this.camera.capture({metadata: options})
+      .then((data) => console.log(data))
+      .catch(err => console.error(err))
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'row'
+  },
+  preview: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+  capture: {
+    flex: 0,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    color: '#000',
+    padding: 10,
+    margin: 40
+  }
+});
 
