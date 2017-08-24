@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityIndicator, StyleSheet, Text, View, ListView } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, View, ListView,Image } from 'react-native';
 
 export default class App extends React.Component {
   constructor(props){
@@ -24,6 +24,8 @@ export default class App extends React.Component {
   };
 
   render() {
+    let pic = {uri: 'http://www.jasonchristopher.com/wp-content/uploads/2015/07/sexy-girl-bikini.jpg'
+  };
     if(this.state.isLoading){
     return (
       <View style={{flex:1, paddingTop: 20}}>
@@ -33,6 +35,11 @@ export default class App extends React.Component {
   }
    return(
      <View style={{flex:1, paddingTop:20}}>
+      
+       <Text> Hello Auto Connector! </Text>
+       <Text> Hello Harshal </Text>
+       
+       <Image source={pic} style={{width: 500, height: 500}}/>
        <ListView
        dataSource={this.state.dataSource}
         renderRow={(rowData) => <Text>{rowData.title}, {rowData.releaseYear}</Text>}
@@ -40,10 +47,6 @@ export default class App extends React.Component {
      </View>
    );
 
-
-
-
- 
   }
 }
 
