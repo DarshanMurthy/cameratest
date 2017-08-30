@@ -1,10 +1,11 @@
 import React, {Component } from 'react'
 import {Text} from'react-native'
 
-export default class Greetings extends Component{
-    render( ){
-        return(<Text> Hello </Text>)
+export default class Greetings extends Component {
+    render() {
+      return (
+        <Text> Hello! Darshan </Text>
+      );
     }
-
-}
-
+  }
+  
