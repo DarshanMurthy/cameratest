@@ -1,5 +1,6 @@
 import React from 'react';
 import { ActivityIndicator, StyleSheet, Text, View, ListView,Image } from 'react-native';
+import {Greeting} from './components/Greetings.js'
 
 export default class App extends React.Component {
   constructor(props){
@@ -36,11 +37,6 @@ export default class App extends React.Component {
    return(
      <View style={{flex:1, paddingTop:20}}>
           <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-      
-       <Text> Hello Auto Connector! </Text>  
-       <Text> Chandan </Text>
-       <Text> Hello Chandan </Text>
-
        <Image source={pic} style={{width: 500, height: 500}}/>
        <ListView
        dataSource={this.state.dataSource}
