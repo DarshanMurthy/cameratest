@@ -1,6 +1,7 @@
 import React from 'react';
 import { ActivityIndicator, StyleSheet, Text, View, ListView,Image } from 'react-native';
-import {Greeting} from './components/Greetings.js'
+import  Greeting  from './components/Greetings.js'
+import TouchSide from './components/TouchSide.js'
 
 export default class App extends React.Component {
   constructor(props){
@@ -36,6 +37,9 @@ export default class App extends React.Component {
   }
    return(
      <View style={{flex:1, paddingTop:20}}>
+      <Text> Temp </Text>
+      <Greeting/>
+      <TouchSide/>
           <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
        <Image source={pic} style={{width: 500, height: 500}}/>
        <ListView

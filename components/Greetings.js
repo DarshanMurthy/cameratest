@@ -4,7 +4,7 @@ import {Text} from'react-native'
 export default class Greetings extends Component {
     render() {
       return (
-        <Text> Hello! Darshan </Text>
+        <Text> Hello! Darshan 1234 </Text>
       );
     }
   }
