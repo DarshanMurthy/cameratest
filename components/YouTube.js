@@ -1,12 +1,14 @@
 import React from 'react'
-import WebView from 'react-native'
+import {WebView} from 'react-native'
 
 export default class YouTube extends React.Component{
     render(){
         return(
             <WebView
-            source={{uri: 'https://github.com/facebook/react-native'}}
-            style={{marginTop: 20}}
+            style={{flex:1}}
+            javaScriptEnabled={true}
+            source={{uri: 'https://www.youtube.com/watch?v=oZ9pr7wfMMw'}}
+           
             />
         )
     }
