@@ -10,10 +10,7 @@ class Blink extends React.Component{
 
         // Toggle the state every second 
         setInterval(() => {
-            this.setState(previousState => {
-                return { showText: !previousState.showText };
-
-            });
+            this.setState(pS => {return { showText: !pS.showText };});
         },1000);
 
     }
