@@ -1,5 +1,5 @@
-import react from 'react'
-import {Text} from 'react-native'
+import React from 'react'
+import {Text, View} from 'react-native'
 
 class ListName extends React.Component{
     render(){
@@ -14,8 +14,11 @@ class ListName extends React.Component{
 export default class Props extends React.Component{
     render(){
         return(
-            <ListName name="Audio and Videos!"/>,
+            <View>
+            <ListName name="Audio and Videos!"/>
             <ListName name=" Try new node"/>
+            <ListName name="camera Test"/>
+            </View>
         )
     }
 

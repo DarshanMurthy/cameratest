@@ -4,6 +4,7 @@ import  Greeting  from './components/Greetings.js'
 import TouchSide from './components/TouchSide.js'
 import YouTube from './components/YouTube.js'
 import Audio from './components/audio.js'
+import Props from './components/propsTest.js'
 
 export default class App extends React.Component {
   constructor(props){
@@ -44,6 +45,7 @@ export default class App extends React.Component {
       <TouchSide/>
       <YouTube/>
       <Audio/>
+      <Props/>
           <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
        <Image source={pic} style={{width: 500, height: 500}}/>
        <ListView
