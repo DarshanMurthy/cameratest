@@ -8,7 +8,7 @@ export default class YouTube extends React.Component{
             style={{flex:1}}
             javaScriptEnabled={true}
             source={{uri: 'https://www.youtube.com/watch?v=oZ9pr7wfMMw'}}
-           
+            automaticallyAdjustContentInsets={false}
             />
         )
     }
