@@ -10,7 +10,6 @@ class ListName extends React.Component{
 
 }
 
-
 export default class Props extends React.Component{
     render(){
         return(
