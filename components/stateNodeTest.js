@@ -30,8 +30,8 @@ export default class Test extends React.Component{
     render(){
         return(
             <View>
-                <Blink text="darshan"/>
-                <Blink text= "darshan 2"/>
+                <Blink text="Hello Welcome to Audio and Video "/>
+                <Blink text= " Our code is simple and easy!"/>
             </View>
             
         )
