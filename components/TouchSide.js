@@ -3,6 +3,6 @@ import {Text} from 'react-native'
 
 export default class TouchSide extends React.Component{
     render(){
-        return(<Text> Hello form Touch Side</Text>)
+        return(<Text> Hello form Touch Side!!</Text>)
     }
 }

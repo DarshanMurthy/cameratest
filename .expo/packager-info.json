@@ -1,8 +1,8 @@
 {
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 9846,
+  "packagerPort": 19002,
+  "packagerPid": 75533,
   "expoServerNgrokUrl": "https://hr-vks.darshan1990.cameratest.exp.direct",
   "packagerNgrokUrl": "https://packager.hr-vks.darshan1990.cameratest.exp.direct",
-  "ngrokPid": 9866
+  "ngrokPid": 75552
 }

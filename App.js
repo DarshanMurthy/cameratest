@@ -5,6 +5,10 @@ import TouchSide from './components/TouchSide.js'
 import YouTube from './components/YouTube.js'
 import Audio from './components/audio.js'
 import Props from './components/propsTest.js'
+import VideoCaptureTest2 from './components/videoCaptureTest2.js'
+import VideoCaptureTest1  from './components/VideoCaptureTest1.js'
+
+
 
 export default class App extends React.Component {
   constructor(props){
@@ -39,6 +43,7 @@ export default class App extends React.Component {
     );
   }
    return(
+    
      <View style={{flex:1, paddingTop:20}}>
       <Text> Temp </Text>
       <Greeting/>
@@ -46,6 +51,9 @@ export default class App extends React.Component {
       <YouTube/>
       <Audio/>
       <Props/>
+      <VideoCaptureTest1/>
+      <VideoCaptureTest2/>
+     
           <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
        <Image source={pic} style={{width: 500, height: 500}}/>
        <ListView
