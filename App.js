@@ -1,13 +1,11 @@
 import React from 'react';
 import { ActivityIndicator, StyleSheet, Text, View, ListView,Image } from 'react-native';
 import  Greeting  from './components/Greetings.js'
-import TouchSide from './components/TouchSide.js'
 import YouTube from './components/YouTube.js'
 import Audio from './components/audio.js'
 import Props from './components/propsTest.js'
-import VideoCaptureTest2 from './components/videoCaptureTest2.js'
-import VideoCaptureTest1  from './components/VideoCaptureTest1.js'
-
+//import VideoCapture from './components/videocapture.js'
+import StateTesting  from './components/stateTesting.js'
 
 
 export default class App extends React.Component {
@@ -45,15 +43,15 @@ export default class App extends React.Component {
    return(
     
      <View style={{flex:1, paddingTop:20}}>
+  
       <Text> Temp </Text>
       <Greeting/>
-      <TouchSide/>
       <YouTube/>
       <Audio/>
       <Props/>
-      <VideoCaptureTest1/>
-      <VideoCaptureTest2/>
-     
+      <StateTesting/>
+   
+      
           <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
        <Image source={pic} style={{width: 500, height: 500}}/>
        <ListView
